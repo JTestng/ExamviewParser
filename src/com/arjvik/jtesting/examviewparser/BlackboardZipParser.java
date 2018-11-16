@@ -3,7 +3,6 @@ package com.arjvik.jtesting.examviewparser;
 import static com.arjvik.jtesting.examviewparser.util.NodeUtils.getChild;
 import static com.arjvik.jtesting.examviewparser.util.NodeUtils.getChildren;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -99,11 +98,6 @@ public class BlackboardZipParser implements TestBankParser {
 		ZipEntry entry;
 		while ((entry = zis.getNextEntry()) != null && !entry.getName().equals("res00000.dat"));
 		return zis;
-	}
-
-	public static void main(String[] args) throws IOException {
-		System.out.println(((TestBankParser) new BlackboardZipParser())
-				.parse(new FileInputStream("/home/arjvik/Documents/ExamView/MyBankBlackboard6-7.zip")));
 	}
 
 }
