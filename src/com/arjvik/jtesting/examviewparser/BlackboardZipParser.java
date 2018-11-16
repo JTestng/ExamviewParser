@@ -102,8 +102,8 @@ public class BlackboardZipParser implements TestBankParser {
 	}
 
 	public static void main(String[] args) throws IOException {
-		((TestBankParser) new BlackboardZipParser())
-				.parse(new FileInputStream("/home/arjvik/Documents/ExamView/MyBankBlackboard6-7.zip"));
+		System.out.println(((TestBankParser) new BlackboardZipParser())
+				.parse(new FileInputStream("/home/arjvik/Documents/ExamView/MyBankBlackboard6-7.zip")));
 	}
 
 }
